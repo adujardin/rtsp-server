@@ -1,4 +1,4 @@
-# rtsp-server
+# RTSP Server from video file using Docker
 
 Original blogpost at https://medium.com/@pratik.mungekar/stream-video-using-gstreamer-rtsp-server-ca498f4a54bd
 
@@ -10,7 +10,7 @@ docker build -t rtsp-file-test .
 
 ## Running it
 
-The filepath need `/host` in front since we added the whole `/` as a volume. On the host the sample video will be located at `/home/user/Downloads/sample-mp4-file.mp4`
+The filepath need `/host` in front since we added the whole `/` as a volume. On the host the sample video will be located at `/home/user/Downloads/sample-mp4-file.mp4`. This video sample can be downloaded at https://www.learningcontainer.com/wp-content/uploads/2020/05/sample-mp4-file.mp4
 
 ```sh
 docker run --rm -v /:/host -p 8554:8554 rtsp-file-test /host/home/user/Downloads/sample-mp4-file.mp4
